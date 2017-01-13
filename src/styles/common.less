@@ -1,7 +1,7 @@
 @import 'lib/include.all.less';
 
 
-
+@main-color: #EC522E;
 
 
 #scroll-up-button {
@@ -156,18 +156,27 @@ footer {
 
 //-------------login layer------------//
 
-#main-login-layer {
-	//display: none;
+#main-login-layer,
+#mail-login-layer,
+#find-password-layer,
+#email-signup-layer {
+	display: none;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 20;
 }
 
-.main-login-layer-box {
+.main-login-layer-box,
+.mail-login-layer-box,
+.mail-login-layer-signup-box,
+.find-password-layer-box,
+.email-signup-box,
+.email-signup-agreement-box,
+.email-signup-submit-box {
 	position: fixed;
 	width: 400px;
 	top: 227px;
@@ -176,36 +185,62 @@ footer {
 	background-color: #ffffff;
 }
 
-.main-login-layer-body {
+.main-login-layer-body,
+.mail-login-layer-body,
+.mail-login-layer-signup-body,
+.find-password-layer-body,
+.email-signup-layer-body,
+.mail-login-layer-signup-body,
+.mail-login-layer-signup-body {
 	position: relative;
 	margin: 25px 25px;
 }
 
-.main-login-layer-title {
+.main-login-layer-title,
+.mail-login-layer-title,
+.find-password-layer-title,
+.email-signup-layer-title {
 	font-size: 17px;
 	font-weight: bold;
 	padding-bottom: 13px;
 	border-bottom: solid 1px #000000;
 }
 
-.main-login-layer-close {
+.main-login-layer-close,
+.mail-login-layer-close,
+.find-password-layer-close,
+.email-signup-layer-close {
 	position: absolute;
 	width: 16px;
 	height: 16px;
 	top: 0px;
-	right: 25px;
+	right: 0px;
 	margin: 4.5px 0px;
 	background-size: cover;
+	cursor: pointer;
 }
 
-.main-login-layer-description {
+.main-login-layer-description,
+.find-password-layer-description,
+.email-signup-layer-description,
+.email-signup-layer-description {
 	font-size: 12px;
 	margin: 20px 0;
 	text-align: center;
 	line-height: 15px;
 }
 
-.main-login-layer-button {
+.main-login-layer-button,
+.mail-login-email-addr-box,
+.mail-login-email-password-box,
+.mail-login-button,
+.mail-login-layer-signup-button,
+.find-password-email-addr-box,
+.cancle-button,
+.find-password-button,
+.email-signup-email-addr-box,
+.email-signup-password-box,
+.again-password-inputbox {
 	position: relative;
 	width: 100%;
 	height: 52px;
@@ -214,10 +249,8 @@ footer {
 	color: #fff;
 	line-height: 52px;
 	margin: 0px auto 10px;
-}
-
-.button-email {
 	background: #000;
+	cursor: pointer;
 }
 
 .button-facebook {
@@ -240,8 +273,152 @@ footer {
 	line-height: 52px;
 }
 
-.main-login-layer-button-text {
+.main-login-layer-button-text,
+.main-login-layer-signup-button-text {
+	font-family: '돋움',dotum;
 	text-align: right;
 	margin-right: 101px;
 	line-height: 52px;
+}
+
+
+//-------------email login layer------------//
+
+.mail-login-layer-box {
+	top: 105px;
+}
+
+.mail-login-layer-signup-box {
+	top: 462px;
+	background-color: #F7F7F7;
+}
+
+.mail-login-email-addr-box,
+.mail-login-email-password-box,
+.find-password-email-addr-box,
+.email-signup-email-addr-box,
+.email-signup-password-box,
+.again-password-inputbox {
+	background-color: #F7F7F7;
+	color: #A9A9A9;
+	margin: 10px 0px;
+	border: 0px;
+	cursor: text;
+}
+
+.addr-inputbox,
+.password-inputbox,
+.again-password-inputbox {
+	width: 100%;
+	padding: 0 20px;
+	background-color: transparent;
+	border: 0px;
+}
+
+.mail-login-email-addr-box {
+	margin-top: 20px;
+}
+
+.mail-login-remain-check {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.remain-check-box {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	border: solid 1px #D2D2D2;
+	cursor: pointer;
+}
+
+.check-box-active {
+	display: none;
+	position: absolute;
+	top: 0px;
+	color: #EC522E;
+	font-size: 14px;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	border: solid 1px #D2D2D2;
+	cursor: pointer;
+}
+
+.remain-check-text {
+	font-size: 12px;
+	color: #909090;
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	line-height: 16px;
+}
+
+.mail-login-button {
+	text-align: center;
+}
+
+.mail-login-find-password {
+	font-family: '돋움',dotum;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: underline;
+	margin: 20px 0px;
+	cursor: pointer;
+}
+
+.mail-login-layer-signup-text {
+	font-family: '돋움',dotum;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.mail-login-layer-signup-button>.email-img {
+	margin-left: 86px;
+}
+
+.main-login-layer-signup-button-text {
+	margin-right: 86px;
+}
+
+
+//-------------find-password layer------------//
+
+.find-password-layer-description {
+	color: black;
+	line-height: 18px;
+	text-align: left;
+}
+
+.cancle-button {
+	text-align: center;
+	width: 49%;
+	margin-right: 7px;
+	display: inline-block;
+}
+
+.find-password-button {
+	text-align: center;
+	width: 49%;
+	display: inline-block;
+}
+
+
+//-------------email-signup layer------------//
+
+.email-signup-box {
+	top: 20px;
+}
+
+.email-signup-agreement-box {
+	display: none;
+}
+
+.email-signup-submit-box {
+	display: none;
+}
+
+.email-signup-agreement-title {
+	font-size: 14px;
 }
