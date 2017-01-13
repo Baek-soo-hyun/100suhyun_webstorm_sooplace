@@ -1,0 +1,247 @@
+@import 'lib/include.all.less';
+
+
+
+
+
+#scroll-up-button {
+	position: fixed;
+	bottom: 30px;
+	right: 90px;
+	width: 74px;
+	height: 74px;
+	border-radius: 100%;
+	background: black;
+	font-size: 20px;
+	line-height: 74px;
+	color: white;
+	text-align: center;
+	z-index: 20;
+	cursor: pointer;
+	border: 0px;
+	outline: 0px;
+}
+
+.section02,
+.section05 {
+	background-color: #F8F8F8;
+}
+
+.main-bar-container,
+.footer-container,
+.section01-container,
+.section02-container,
+.section03-container,
+.section04-container,
+.section05-container,
+.section06-container {
+	position: relative;
+	max-width: 1268px;
+	margin: 0px auto 45px;
+}
+
+.section03-container,
+.section06-container,
+.footer-container {
+	margin-bottom: 0px;
+}
+
+.main-bar-body,
+.footer-body,
+.section01-body,
+.section02-body,
+.section03-body,
+.section04-body,
+.section05-body,
+.section06-body {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	padding: 35px 55px;
+	white-space: nowrap;
+}
+
+.layer-darker {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+}
+
+
+//-------------footer------------//
+footer {
+	border-top: solid 6px black;
+}
+
+.footer-sns-shortcut {
+	position: absolute;
+	right: 55px;
+}
+
+.footer-sns-shortcut>div {
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	list-style: none;
+	background-size: 100% 100%;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.footer-sns-shortcut>div:last-child {
+	margin-right: 0px;
+}
+
+.footer-site-info-container {
+	width: 100%;
+}
+
+.footer-site-info,
+.footer-company-info {
+	width: 100%;
+	padding-left: 0px;
+	white-space: normal;
+}
+
+.footer-site-info>li {
+	display: inline-block;
+	list-style: none;
+	font-size: 14px;
+	color: black;
+	padding: 0px 10px;
+	border-right: solid 1px #D2D2D2;
+	line-height: 13px;
+	cursor: pointer;
+}
+
+.footer-site-info>li:first-child,
+.footer-company-info>li:first-child,
+.footer-company-info>li:last-child {
+	padding-left: 0px;
+}
+
+
+.footer-site-info>li:last-child {
+	padding-right: 0px;
+	border-right: none;
+}
+
+.footer-company-info>li {
+	display: inline-block;
+	list-style: none;
+	font-size: 12.5px;
+	color: #8A8A8A;
+	padding: 0 10px;
+	border-right: solid 1px #D2D2D2;
+	line-height: 10px;
+}
+
+.footer-company-info>li:nth-child(5),
+.footer-company-info>li:last-child {
+	padding-right: 0px;
+	border-right: none;
+}
+
+.corp-resistration-num {
+	cursor: pointer;;
+}
+
+.footer-copyright {
+	font-size: 12.5px;
+	color: #8A8A8A;
+	margin-top: 20px;
+}
+
+//-------------login layer------------//
+
+#main-login-layer {
+	//display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 20;
+}
+
+.main-login-layer-box {
+	position: fixed;
+	width: 400px;
+	top: 227px;
+	left: 50%;
+	margin-left: -200px;
+	background-color: #ffffff;
+}
+
+.main-login-layer-body {
+	position: relative;
+	margin: 25px 25px;
+}
+
+.main-login-layer-title {
+	font-size: 17px;
+	font-weight: bold;
+	padding-bottom: 13px;
+	border-bottom: solid 1px #000000;
+}
+
+.main-login-layer-close {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 0px;
+	right: 25px;
+	margin: 4.5px 0px;
+	background-size: cover;
+}
+
+.main-login-layer-description {
+	font-size: 12px;
+	margin: 20px 0;
+	text-align: center;
+	line-height: 15px;
+}
+
+.main-login-layer-button {
+	position: relative;
+	width: 100%;
+	height: 52px;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 52px;
+	margin: 0px auto 10px;
+}
+
+.button-email {
+	background: #000;
+}
+
+.button-facebook {
+	background: #3B5998;
+}
+
+.button-kakao {
+	color: #3B1E1E;
+	background: #FBE300;
+}
+
+.email-img,
+.facebook-img,
+.kakao-img {
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 101px;
+	margin-right: 10px;
+	line-height: 52px;
+}
+
+.main-login-layer-button-text {
+	text-align: right;
+	margin-right: 101px;
+	line-height: 52px;
+}
