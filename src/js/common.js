@@ -22,13 +22,38 @@ define([
 	}
 
 
+	/* ----------------main logo----------------*/
+	$("#main-bar-logo").on("click", function() {
+		location.href = "/";
+	});
+
+
+	/* ----------------main search box----------------*/
+	function search() {
+		location.href = "search.html";
+	}
+	function clearSearchKeywords() {
+		$("#main-top-search-input").val("");
+	}
+
+	$("#main-top-search-input").on("keyup", function(event) {
+		if (event.keyCode === 13) {
+			search();
+		}
+		else if (event.keyCode === 27) {
+			clearSearchKeywords();
+		}
+	});
+
+
+	/* ----------------login layers----------------*/
 	function showLoginLayer() {
 		$("#main-bar-login-button").on("click", function() {
 			$("#main-login-layer").show();
 		});
 	}
 	function hideLoginLayer() {
-		$(".main-login-layer-close").on("click", function() {
+		$(".layer-close-button").on("click", function() {
 			$("#main-login-layer").hide();
 		});
 	}
@@ -41,9 +66,11 @@ define([
 		});
 	}
 	function hideMailLoginLayer() {
-		$(".mail-login-layer-close").on("click", function() {
+		$(".layer-close-button").on("click", function() {
 			$("#mail-login-layer").hide();
-			$("#main-login-layer").hide();
+			$(".check-box-active").hide();
+			$(".email-addr-inputbox").val("");
+			$(".password-inputbox").val("");
 		});
 	}
 
@@ -55,36 +82,57 @@ define([
 		});
 	}
 	function hideFindPasswordLayer() {
-		$(".find-password-layer-close, .cancle-button").on("click", function() {
+		$(".layer-close-button, .cancle-button").on("click", function() {
 			$("#find-password-layer").hide();
 			$("#main-login-layer").hide();
+			$(".email-addr-inputbox").val("");
 		});
 	}
 
 
 	function showSignUpLayer() {
 		$(".mail-login-layer-signup-button").on("click", function() {
-			$("#find-password-layer").hide();
+			$("#mail-login-layer").hide();
 			$("#email-signup-layer").show();
 		});
 	}
 	function hideSignUpLayer() {
-		$(".find-password-layer-close, .cancle-button, .email-signup-layer-close").on("click", function() {
+		$(".layer-close-button").on("click", function() {
+			$("#find-password-layer").hide();
 			$("#email-signup-layer").hide();
 			$("#main-login-layer").hide();
-		});
-	}
-
-
-	function checkBox() {
-		$(".remain-check-box").on("click", function() {
-			$(".check-box-active").show();
-		});
-	}
-	function unCheckBox() {
-		$(".check-box-active").on("click", function() {
 			$(".check-box-active").hide();
-			$(".remain-check-box").show();
+			$(".all-check-box-active").hide();
+			$(".email-addr-inputbox").val("");
+			$(".password-inputbox").val("");
+			$(".again-password-inputbox").val("");
+		});
+	}
+
+
+	function singleCheckBox() {
+		$(".single-check-box").on("click", function() {
+			var select = $(this).parent("div");
+			select.find("i").show();
+		});
+	}
+	function singleUnCheckBox() {
+		$(".check-box-active").on("click", function() {
+			$(this).hide();
+		});
+	}
+
+
+	function allCheckBox() {
+		$(".all-check-box").on("click", function() {
+			$(".check-box-active").show();
+			$(".all-check-box-active").show();
+		});
+	}
+	function allUnCheckBox() {
+		$(".all-check-box-active").on("click", function() {
+			$(".check-box-active").hide();
+			$(this).hide();
 		});
 	}
 
@@ -99,6 +147,8 @@ define([
 	showSignUpLayer();
 
 	hideSignUpLayer();
-	checkBox();
-	unCheckBox();
+	singleCheckBox();
+	singleUnCheckBox();
+	allCheckBox();
+	allUnCheckBox();
 });

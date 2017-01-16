@@ -190,8 +190,8 @@ footer {
 .mail-login-layer-signup-body,
 .find-password-layer-body,
 .email-signup-layer-body,
-.mail-login-layer-signup-body,
-.mail-login-layer-signup-body {
+.email-signup-submit-body {
+	font-family: '돋움',dotum;
 	position: relative;
 	margin: 25px 25px;
 }
@@ -206,10 +206,7 @@ footer {
 	border-bottom: solid 1px #000000;
 }
 
-.main-login-layer-close,
-.mail-login-layer-close,
-.find-password-layer-close,
-.email-signup-layer-close {
+.layer-close-button {
 	position: absolute;
 	width: 16px;
 	height: 16px;
@@ -223,7 +220,7 @@ footer {
 .main-login-layer-description,
 .find-password-layer-description,
 .email-signup-layer-description,
-.email-signup-layer-description {
+.agreement-title {
 	font-size: 12px;
 	margin: 20px 0;
 	text-align: center;
@@ -240,7 +237,8 @@ footer {
 .find-password-button,
 .email-signup-email-addr-box,
 .email-signup-password-box,
-.again-password-inputbox {
+.email-signup-again-password-box,
+.email-signup-complete-button {
 	position: relative;
 	width: 100%;
 	height: 52px;
@@ -298,7 +296,7 @@ footer {
 .find-password-email-addr-box,
 .email-signup-email-addr-box,
 .email-signup-password-box,
-.again-password-inputbox {
+.email-signup-again-password-box {
 	background-color: #F7F7F7;
 	color: #A9A9A9;
 	margin: 10px 0px;
@@ -306,7 +304,7 @@ footer {
 	cursor: text;
 }
 
-.addr-inputbox,
+.email-addr-inputbox,
 .password-inputbox,
 .again-password-inputbox {
 	width: 100%;
@@ -324,11 +322,12 @@ footer {
 	margin-bottom: 20px;
 }
 
-.remain-check-box {
+.single-check-box {
 	width: 16px;
 	height: 16px;
 	margin-right: 4px;
 	border: solid 1px #D2D2D2;
+	background-color: #ffffff;
 	cursor: pointer;
 }
 
@@ -385,7 +384,9 @@ footer {
 
 //-------------find-password layer------------//
 
-.find-password-layer-description {
+.find-password-layer-description,
+.email-signup-layer-description,
+.agreement-title {
 	color: black;
 	line-height: 18px;
 	text-align: left;
@@ -408,17 +409,129 @@ footer {
 //-------------email-signup layer------------//
 
 .email-signup-box {
+	position: absolute;
 	top: 20px;
 }
 
 .email-signup-agreement-box {
-	display: none;
-}
-
-.email-signup-submit-box {
-	display: none;
+	position: absolute;
+	top: 443px;
+	background-color: #F7F7F7;
 }
 
 .email-signup-agreement-title {
 	font-size: 14px;
+	font-weight: bold;
+}
+
+.use-agreement-agree,
+.personal-info-agree,
+.location-info-agree,
+.mail-receive-agree {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.use-agreement-agree {
+	margin-top: -10px;
+}
+
+.mail-receive-agree {
+	margin-bottom: 0px;
+}
+
+.info-agree-text {
+	display: inline-block;
+}
+
+.agreement-title {
+
+	margin: 0px 0px 1px;
+	cursor: pointer;
+}
+
+.agreement-description {
+	font-size: 12px;
+	color: #909090;
+	text-align: left;
+}
+
+.agreement-check-area {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	top: 0;
+	right: 0;
+	margin: 10px 0;
+}
+
+.agree-check-box-container {
+	position: absolute;
+	width: 20%;
+	right: -25px;
+}
+
+.agreement-check-text {
+	font-size: 12px;
+	color: #909090;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	line-height: 16px;
+}
+
+.agreement-check-text {
+	color: #000;
+}
+
+.email-signup-submit-box {
+	position: absolute;
+	top: 648px;
+}
+
+.email-signup-submit-body {
+	margin: 15px 25px 25px;
+}
+
+.agreement-all-check-area {
+	text-align: right;
+}
+
+.all-check-box {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	border: solid 1px #D2D2D2;
+	background-color: #ffffff;
+	cursor: pointer;
+	right: 50px;
+	position: absolute;
+}
+
+.all-check-box-active {
+	display: none;
+	position: absolute;
+	top: 0px;
+	color: #EC522E;
+	font-size: 14px;
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	border: solid 1px #D2D2D2;
+	cursor: pointer;
+	right: 50px;
+}
+
+.agreement-all-check-text {
+	font-size: 12px;
+	color: #909090;
+	top: 0px;
+	line-height: 16px;
+	right: 0px;
+}
+
+.email-signup-complete-button {
+	text-align: center;
+	margin-top: 15px;
 }
