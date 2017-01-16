@@ -137,6 +137,16 @@ define([
 	}
 
 
+	/* ----------------footer local category----------------*/
+	function activeCategory() {
+		$(".local-category>li").mouseover(function() {
+			var select = $(this).parent("ul");
+			select.find("li").removeClass("active");
+			$(this).addClass("active");
+		});
+	}
+
+
 	scrollUp();
 	showLoginLayer();
 	hideLoginLayer();
@@ -145,10 +155,10 @@ define([
 	showFindPasswordLayer();
 	hideFindPasswordLayer();
 	showSignUpLayer();
-
 	hideSignUpLayer();
 	singleCheckBox();
 	singleUnCheckBox();
 	allCheckBox();
 	allUnCheckBox();
+	activeCategory();
 });
