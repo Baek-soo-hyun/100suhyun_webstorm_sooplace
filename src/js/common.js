@@ -38,12 +38,13 @@ define([
 		location.href = "search.html";
 	}
 	function clearSearchKeywords() {
-		$("#main-top-search-input").val("");
+		$("#main-top-search-input, #header-top-search-input").val("");
 	}
 
-	$("#main-top-search-input").on("keyup", function(event) {
+	$("#main-top-search-input, #header-top-search-input").on("keyup", function(event) {
 		if (event.keyCode === 13) {
 			search();
+			clearSearchKeywords();
 		}
 		else if (event.keyCode === 27) {
 			clearSearchKeywords();
@@ -53,8 +54,8 @@ define([
 
 	/* ----------------search box layer----------------*/
 	function showSearchBoxLayer() {
-		$("#main-top-search-input").on("click", function(event) {
-			$("#search-box-layer").show();
+		$("#main-top-search-input, #header-top-search-input").on("click", function(event) {
+			$("#search-box-layer, #header-search-box-layer").show();
 		});
 	}
 	function activeSearchBoxLayerList() {
@@ -65,8 +66,8 @@ define([
 	}
 	function hideSearchBoxLayer() {
 		$(".sp-container").click(function(e) {
-			if (!$("#main-top-search-box").has(e.target).length) {
-				$("#search-box-layer").hide();
+			if (!$("#main-top-search-box, #header-top-search-box").has(e.target).length) {
+				$("#search-box-layer, #header-search-box-layer").hide();
 				$(".search-box-layer-list").removeClass("active");
 			}
 		});
@@ -90,7 +91,7 @@ define([
 
 	/* ----------------login layers----------------*/
 	function showLoginLayer() {
-		$("#main-bar-login-button").on("click", function() {
+		$("#main-bar-login-button, #header-bar-login-button").on("click", function() {
 			$("#main-login-layer").show();
 		});
 	}
@@ -198,7 +199,7 @@ define([
 	function inActiveCategory() {
 		$(".local-category>li").mouseout(function() {
 			$(".local-category>li").removeClass("active");
-			$(".local-category>li.su").addClass("active");
+			$(".local-category>.su").addClass("active");
 		});
 	}
 

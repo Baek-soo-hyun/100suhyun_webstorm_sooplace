@@ -1,207 +1,113 @@
-<!DOCTYPE html>
-<html lang="{{lang}}">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+{{> header title='서울 맛집 지도 : 얍플레이스(YAP Place)' cssName='hotple'}}
 
-	<title>Title</title>
-
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="plugins/normalize/normalize.css">
-	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/hotple.css">
-	<script src="plugins/modernizr/modernizr-2.8.3.min.js"></script>
-</head>
-<body>
-
-<div class="sp-container">
-	<button id="scroll-up-button">TOP</button>
-	<header id="header-bar">
-		<div class="header-bar-container">
-			<div class="header-bar-body">
-				<div id="header-bar-logo"></div>
-				<ul id="header-bar-menu">
-					<li class="menu-hotple">핫플</li>
-					<li class="menu-theme">테마</li>
-					<li class="menu-order">주문</li>
-				</ul>
-				<div id="main-top-search-box">
-					<div id="main-top-search-form">
-						<input id="main-top-search-input" type="text" placeholder="검색해보세요">
-						<div class="search-box-clear-btn"></div>
-						<i class="fa fa-search"></i>
-					</div>
-					<div id="search-box-layer">
-						<div class="search-box-layer-container">
-							<div class="search-box-layer-recently">
-								<div class="search-box-layer-title">
-									최근 검색
-								</div>
-								<div class="search-box-layer-list-container">
-									<ul class="search-box-layer-list-body">
-										<li class="search-box-layer-list">
-											<div class="list-body recently-search">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													한강진
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="search-box-layer-recommend">
-								<div class="search-box-layer-title">
-									얍플 추천
-								</div>
-								<div class="search-box-layer-list-container">
-									<ul class="search-box-layer-list-body">
-										<li class="search-box-layer-list">
-											<div class="list-body always order-home">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													집으로 주문하기
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body search-storename">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													<span>목동</span>(으)로 상호검색
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend instar">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													인스타그램 HOT100
-												</div>
-												<div class="search-box-layer-list-amount">
-													100+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend facebook">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													페이스북 HOT100
-												</div>
-												<div class="search-box-layer-list-amount">
-													90+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend sc">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													서촌 데이트 맛집
-												</div>
-												<div class="search-box-layer-list-amount">
-													70+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend gj">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													광주 맛집
-												</div>
-												<div class="search-box-layer-list-amount">
-													200+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend jj">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													제주도 여행 어때?
-												</div>
-												<div class="search-box-layer-list-amount">
-													400+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body yap-recommend hgj">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													한강진 맛집
-												</div>
-												<div class="search-box-layer-list-amount">
-													80+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend ds">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													도산공원 맛집
-												</div>
-												<div class="search-box-layer-list-amount">
-													80+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend yn">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													연남동 맛집
-												</div>
-												<div class="search-box-layer-list-amount">
-													100+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body default yap-recommend yn">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													연남동 맛집
-												</div>
-												<div class="search-box-layer-list-amount">
-													100+
-												</div>
-											</div>
-										</li>
-										<li class="search-box-layer-list">
-											<div class="list-body yap-recommend md">
-												<div class="search-box-layer-list-img"></div>
-												<div class="search-box-layer-list-text">
-													목동야구장 맛집
-												</div>
-												<div class="search-box-layer-list-storename">
-													상호
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
+	<div id="hotple-contents">
+		<div class="top-menu-bar">
+			<div class="top-menu-bar-container">
+				<div class="top-menu-bar-body">
 				</div>
-				<button id="header-bar-login-button">
-					로그인
-				</button>
 			</div>
 		</div>
-	</header>
-	<div id="main-contents">
-
+		<div class="hotple-map">
+			<div class="hotple-map-container">
+				<div class="hotple-map-body">
+					<div class="">a</div>
+				</div>
+			</div>
+		</div>
+		<div class="local-list">
+			<div class="local-list-container">
+				<div class="local-list-body">
+					<div class="local-scope">
+						<ul class="su-gn">
+							<div class="hotple local-scope-title">
+								서울강남 핫플
+							</div>
+							<li>가로수길</li>
+							<li>강남구청</li>
+							<li>강남언덕길</li>
+							<li>강남역</li>
+							<li>고속터미널</li>
+							<li>교대역</li>
+							<li>남부터미널</li>
+							<li>논현</li>
+							<li>도산대로</li>
+							<li>사당역</li>
+							<li>삼성</li>
+							<li>서래마을</li>
+							<li>서울대입구</li>
+							<li>선릉역</li>
+							<li>신림역</li>
+							<li>신천역</li>
+							<li>압구정로데오</li>
+							<li>압구정역</li>
+							<li>양재역</li>
+							<li>여의도</li>
+							<li>역삼</li>
+							<li>천호역</li>
+							<li>청담</li>
+							<br>
+							<li>서울 강남구</li>
+							<li>서울 강동구</li>
+							<li>서울 강서구</li>
+							<li>서울 관악구</li>
+							<li>서울 구로구</li>
+							<li>서울 금천구</li>
+							<li>서울 동작구</li>
+							<li>서울 서초구</li>
+							<li>서울 송파구</li>
+							<li>서울 양천구</li>
+							<li>서울 영등포구</li>
+						</ul>
+						<ul class="su-gb">
+							<div class="hotple local-scope-title">
+								서울강북 핫플
+							</div>
+							<li>건대</li>
+							<li>경리단길</li>
+							<li>광화문</li>
+							<li>대학로</li>
+							<li>독서당길</li>
+							<li>명동</li>
+							<li>보석길</li>
+							<li>부암동</li>
+							<li>북촌</li>
+							<li>삼청동</li>
+							<li>상수</li>
+							<li>서촌</li>
+							<li>성북동</li>
+							<li>숙대입구역</li>
+							<li>시청</li>
+							<li>신촌</li>
+							<li>연남동</li>
+							<li>연희동</li>
+							<li>우사단로</li>
+							<li>이대앞</li>
+							<li>이촌</li>
+							<li>이태원</li>
+							<li>인사동</li>
+							<li>한강진</li>
+							<li>합정</li>
+							<li>해방촌</li>
+							<li>홍대</li>
+							<br>
+							<li>서울 강북구</li>
+							<li>서울 광진구</li>
+							<li>서울 노원구</li>
+							<li>서울 도봉구</li>
+							<li>서울 동대문구</li>
+							<li>서울 마포구</li>
+							<li>서울 서대문구</li>
+							<li>서울 성동구</li>
+							<li>서울 성북구</li>
+							<li>서울 용산구</li>
+							<li>서울 은평구</li>
+							<li>서울 종로구</li>
+							<li>서울 중구</li>
+							<li>서울 중량구</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
 {{> footer jsName='hotple'}}
