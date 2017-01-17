@@ -22,6 +22,62 @@
 	outline: 0px;
 }
 
+
+//-------------header-------------//
+#header-bar {
+	position: relative;
+	display: inline-block;
+	height: 44px;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
+	color: #000000;
+	z-index: 20;
+}
+
+#header-bar-logo {
+	display: inline-block;
+	width: 140px;
+	height: 36px;
+	background-image: url(../img/sp_yap.png);
+	background-repeat: no-repeat;
+	background-position: 0 -267px;
+	left: 0;
+	vertical-align: middle;
+	cursor: pointer;
+	outline: none;
+}
+
+#header-bar-menu {
+	display: inline-block;
+}
+
+#header-bar-menu>li {
+	display: inline-block;
+	list-style: none;
+	left: 0;
+	padding: 0 9px;
+	font-size: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#header-bar-login-button {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	top: 41px;
+	right: 55px;
+	background-color: transparent;
+	font-size: 12px;
+	border: solid 1px #000;
+	border-radius: 2px;
+	outline: 0px;
+	cursor: pointer;
+}
+
+//-------------main-------------//
+
 .section02,
 .section05 {
 	background-color: #F8F8F8;
@@ -70,8 +126,149 @@
 }
 
 
-//-------------search box layer------------//
+//-------------search box-------------//
+#main-top-search-box {
+	width: 436px;
+	margin: 32px auto 0px;
+}
 
+#main-top-search-form {
+	position: relative;
+	width: 436px;
+	height: 72px;
+	font-size: 20px;
+	margin-top: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+#main-top-search-input {
+	position: absolute;
+	border: none;
+	width: 73%;
+	top: 19px;
+	left: 17px;
+	font-size: 22px;
+	font-weight: normal;
+	color: #9D9D9D;
+}
+
+.search-box-clear-btn {
+	display: none;
+	position: absolute;
+	background-image: url(../img/sp_yap.png);
+	background-repeat: no-repeat;
+	background-position: -199px -160px;
+	width: 24px;
+	height: 24px;
+	right: 63px;
+	margin: 24px 0px;
+}
+
+#main-top-search-form>i.fa-search {
+	position: absolute;
+	padding: 15px;
+	right: 5px;
+	font-size: 37px;
+	color: #EC522E;
+	cursor: pointer;
+}
+
+//-------------search box layer-------------//
+#search-box-layer {
+	display: none;
+	position: absolute;
+	width: 436px;
+	top: 236px;
+	margin: 0 auto;
+	color: #777777;
+	background-color: #fff;
+	border: solid 1px #D2D2D2;
+	z-index: 1;
+	text-align: left;
+}
+
+.search-box-layer-recently {
+	border-bottom: solid 1px #D2D2D2;
+}
+
+.search-box-layer-title {
+	background-color: #F5F5F5;
+	font-size: 15px;
+	border-bottom: solid 1px #D2D2D2;
+	padding: 5px 20px;
+}
+
+.search-box-layer-list-body {
+	padding: 0px;
+	margin-bottom: 0px;
+	font-size: 16px;
+	list-style: none;
+}
+
+.search-box-layer-list {
+	cursor: pointer;
+}
+
+.search-box-layer-list.active {
+	background-color: #FCE9E4;
+}
+
+.list-body {
+	position: relative;
+	padding: 10px 20px;
+}
+
+.search-box-layer-list-img {
+	display: inline-block;
+	background-image: url(../img/sp_yap.png);
+	background-repeat: no-repeat;
+	margin-right: 20px;
+	width: 21px;
+	height: 17px;
+	vertical-align: middle;
+}
+
+.recently-search .search-box-layer-list-img {
+	background-position: -498px -237px;
+}
+
+.order-home .search-box-layer-list-img {
+	background-position: -498px -220px;
+}
+
+.search-storename .search-box-layer-list-img {
+	background-position: -498px -254px;
+}
+
+.yap-recommend .search-box-layer-list-img {
+	background-position: 0px 0px;
+}
+
+.search-box-layer-list-text,
+.search-box-layer-list-amount,
+.search-box-layer-list-storename {
+	display: inline-block;
+	font-size: 18px;
+}
+
+.search-box-layer-list-amount,
+.search-box-layer-list-storename {
+	position: absolute;
+	right: 20px;
+}
+
+.always.order-home .search-box-layer-list-text,
+.search-storename .search-box-layer-list-text>span,
+.search-box-layer-list-amount {
+	color: @main-color;
+}
+
+.search-box-layer-list-storename {
+	color: #3793CD;
+	font-weight: bold;
+}
 
 
 //-------------footer------------//

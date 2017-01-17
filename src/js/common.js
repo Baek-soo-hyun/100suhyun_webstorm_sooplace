@@ -23,10 +23,15 @@ define([
 
 
 	/* ----------------main logo----------------*/
-	$("#main-bar-logo").on("click", function() {
+	$("#main-bar-logo, #header-bar-logo").on("click", function() {
 		location.href = "/";
 	});
 
+
+	/* ----------------header----------------*/
+	$(".menu-hotple").on("click", function() {
+		location.href = "hotple.html";
+	});
 
 	/* ----------------main search box----------------*/
 	function search() {
@@ -44,6 +49,43 @@ define([
 			clearSearchKeywords();
 		}
 	});
+
+
+	/* ----------------search box layer----------------*/
+	function showSearchBoxLayer() {
+		$("#main-top-search-input").on("click", function(event) {
+			$("#search-box-layer").show();
+		});
+	}
+	function activeSearchBoxLayerList() {
+		$(".search-box-layer-list").mouseover(function() {
+			$(".search-box-layer-list").removeClass("active");
+			$(this).addClass("active");
+		});
+	}
+	function hideSearchBoxLayer() {
+		$(".sp-container").click(function(e) {
+			if (!$("#main-top-search-box").has(e.target).length) {
+				$("#search-box-layer").hide();
+				$(".search-box-layer-list").removeClass("active");
+			}
+		});
+	}
+
+
+	/* ----------------search box clear btn----------------*/
+	function showSearchClearBtn() {
+		$("#main-top-search-input").on("keyup", function(event) {
+			$(".search-box-clear-btn").show();
+		});
+	}
+	function hideSearchClearBtn() {
+		$(".search-box-clear-btn").on("click", function(event) {
+			$("#search-box-layer").hide();
+			$(".search-box-clear-btn").hide();
+			$("#main-top-search-input").val("");
+		});
+	}
 
 
 	/* ----------------login layers----------------*/
@@ -138,11 +180,25 @@ define([
 
 
 	/* ----------------footer local category----------------*/
+	function clickCategory() {
+		$(".local-category>li").on("click", function() {
+			var select = $(this).parent("ul");
+			select.find("li").removeClass("active");
+			$(this).addClass("active");
+			activeCategory();
+		});
+	}
 	function activeCategory() {
 		$(".local-category>li").mouseover(function() {
 			var select = $(this).parent("ul");
 			select.find("li").removeClass("active");
 			$(this).addClass("active");
+		});
+	}
+	function inActiveCategory() {
+		$(".local-category>li").mouseout(function() {
+			$(".local-category>li").removeClass("active");
+			$(".local-category>li.su").addClass("active");
 		});
 	}
 
@@ -160,5 +216,12 @@ define([
 	singleUnCheckBox();
 	allCheckBox();
 	allUnCheckBox();
+	clickCategory();
 	activeCategory();
+	inActiveCategory();
+	showSearchClearBtn();
+	hideSearchClearBtn();
+	showSearchBoxLayer();
+	hideSearchBoxLayer();
+	activeSearchBoxLayerList();
 });
