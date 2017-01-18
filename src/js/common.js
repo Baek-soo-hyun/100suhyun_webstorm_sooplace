@@ -1,5 +1,6 @@
 define([
 	"bootstrap",
+	"clipboard",
 ], function() {
 	function scrollUp() {
 		$(document).ready(function() {
@@ -180,26 +181,47 @@ define([
 	}
 
 
+	/* ----------------sns share layers----------------*/
+	function showLocalCategoryLayer() {
+		$(".top-menu-bar.local-category-area").on("click", function() {
+			$(".top-menu-bar.local-category-layer").show();
+		});
+	}
+	function hideLocalCategoryLayer() {
+		$("#hotple-contents").click(function(e) {
+			if (!$(".top-menu-bar").has(e.target).length) {
+				$(".top-menu-bar.local-category-layer").hide();
+			}
+		});
+	}
+
+
+	/* ----------------sns share layers----------------*/
+	function showSnsShareLayer() {
+		$(".top-menu-bar.share-btn").on("click", function() {
+			$(".top-menu-bar.share-btn-layer").show();
+		});
+	}
+	function hideSnsShareLayer() {
+		$(".layer-close-button").on("click", function() {
+			$(".top-menu-bar.share-btn-layer").hide();
+		});
+	}
+	function shareLink() {
+		var Clipboard = require("clipboard");
+		var clipboard = new Clipboard(".link-share-btn");
+		clipboard.on("success", function() {
+			alert("페이지의 주소가 복사되었습니다.");
+		});
+	}
+
+
 	/* ----------------footer local category----------------*/
 	function clickCategory() {
 		$(".local-category>li").on("click", function() {
 			var select = $(this).parent("ul");
 			select.find("li").removeClass("active");
 			$(this).addClass("active");
-			activeCategory();
-		});
-	}
-	function activeCategory() {
-		$(".local-category>li").mouseover(function() {
-			var select = $(this).parent("ul");
-			select.find("li").removeClass("active");
-			$(this).addClass("active");
-		});
-	}
-	function inActiveCategory() {
-		$(".local-category>li").mouseout(function() {
-			$(".local-category>li").removeClass("active");
-			$(".local-category>.su").addClass("active");
 		});
 	}
 
@@ -218,11 +240,14 @@ define([
 	allCheckBox();
 	allUnCheckBox();
 	clickCategory();
-	activeCategory();
-	inActiveCategory();
 	showSearchClearBtn();
 	hideSearchClearBtn();
 	showSearchBoxLayer();
 	hideSearchBoxLayer();
+	showLocalCategoryLayer();
+	hideLocalCategoryLayer();
+	showSnsShareLayer();
+	hideSnsShareLayer();
+	shareLink();
 	activeSearchBoxLayerList();
 });
