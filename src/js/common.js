@@ -44,7 +44,7 @@ define([
 		location.href = "theme.newest.html";
 	});
 
-	$(".theme-menuall>.theme-menu-text").on("click", function() {
+	$(".theme-menu-all>.theme-menu-text").on("click", function() {
 		location.href = "theme.all.html";
 	});
 
