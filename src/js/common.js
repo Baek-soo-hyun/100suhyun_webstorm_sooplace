@@ -29,10 +29,25 @@ define([
 	});
 
 
-	/* ----------------header----------------*/
+	/* ----------------header menu----------------*/
 	$(".menu-hotple").on("click", function() {
 		location.href = "hotple.html";
 	});
+
+	$(".menu-theme").on("click", function() {
+		location.href = "theme.newest.html";
+	});
+
+
+	/* ----------------top img bar menu----------------*/
+	$(".theme-menu-newest>.theme-menu-text").on("click", function() {
+		location.href = "theme.newest.html";
+	});
+
+	$(".theme-menuall>.theme-menu-text").on("click", function() {
+		location.href = "theme.all.html";
+	});
+
 
 	/* ----------------main search box----------------*/
 	function search() {
@@ -183,7 +198,7 @@ define([
 
 	/* ----------------sns share layers----------------*/
 	function showLocalCategoryLayer() {
-		$(".top-menu-bar.local-category-area").on("click", function() {
+		$(".top-menu-bar.local-category-text").on("click", function() {
 			$(".top-menu-bar.local-category-layer").show();
 		});
 	}
