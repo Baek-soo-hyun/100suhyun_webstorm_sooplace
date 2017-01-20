@@ -38,6 +38,9 @@ define([
 		location.href = "theme.newest.html";
 	});
 
+	$(".menu-order").on("click", function() {
+		location.href = "delivery.html";
+	});
 
 	/* ----------------top img bar menu----------------*/
 	$(".theme-menu-newest>.theme-menu-text").on("click", function() {
