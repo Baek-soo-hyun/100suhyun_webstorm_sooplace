@@ -12,7 +12,13 @@ require([
 			$(".theme-tag-keyword").removeClass("active");
 		});
 	}
+	function goToThemeTag() {
+		$(".theme-list>li").on("click", function(event) {
+			location.href = "theme.tag.html";
+		});
+	}
 
 	activeThemeTagList();
 	inActiveThemeTagList();
+	goToThemeTag();
 });
