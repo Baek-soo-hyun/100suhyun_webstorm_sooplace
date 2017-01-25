@@ -216,7 +216,7 @@ define([
 
 	/* ----------------sns share layers----------------*/
 	function showSnsShareLayer() {
-		$(".top-menu-bar.share-btn").on("click", function() {
+		$(".top-menu-bar.share-btn, .top-menu-bar.search-share-btn").on("click", function() {
 			$(".top-menu-bar.share-btn-layer").show();
 		});
 	}
